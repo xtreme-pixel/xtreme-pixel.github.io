@@ -90,9 +90,26 @@ const npcsColumns: TableColumn<any>[] = [
     }
   }
 ]
+
+
+const open = ref(true)
+
+defineShortcuts({
+  o: () => open.value = !open.value
+})
 </script>
 
 <template>
+
+  <UModal v-model:open="open" title="Falta poco para la apertura" :close="false" size="md" description="Estamos afinando detalles para brindarte la mejor experiencia. ¡Pronto estaremos en línea!">
+    <template #footer>
+      <div class="w-full text-right">
+        <UButton color="warning" variant="solid" @click="open = false" href="https://discord.gg/66f3ZfPKBY" target="_blank">Cerrar</UButton>
+      </div>
+    </template>
+  </UModal>
+
+
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
     <!-- Header Hero -->
     <div class="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white py-20">

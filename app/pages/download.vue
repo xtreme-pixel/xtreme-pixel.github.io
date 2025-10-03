@@ -15,7 +15,8 @@ const downloadLinks = ref([
     color: 'red',
     description: 'Descarga rápida y confiable',
     features: ['Alta velocidad', 'Resumen de descarga', 'Encriptación'],
-    url: '#',
+    url: 'https://discord.gg/66f3ZfPKBY',
+    target: '_blank',
     status: 'Disponible'
   },
   {
@@ -24,7 +25,8 @@ const downloadLinks = ref([
     color: 'blue',
     description: 'Servicio de descarga directa',
     features: ['Descarga directa', 'Sin esperas', 'Fácil acceso'],
-    url: '#',
+    url: 'https://discord.gg/66f3ZfPKBY',
+    target: '_blank',
     status: 'Disponible'
   },
   {
@@ -33,7 +35,8 @@ const downloadLinks = ref([
     color: 'green',
     description: 'Almacenamiento en la nube',
     features: ['Acceso inmediato', 'Integración con Google', 'Descarga segura'],
-    url: '#',
+    url: 'https://discord.gg/66f3ZfPKBY',
+    target: '_blank',
     status: 'Disponible'
   }
 ])
@@ -226,6 +229,8 @@ const downloadStats = ref({
               :block="true"
               class="font-bold"
               :ui="{ rounded: 'rounded-lg' }"
+              :href="link.url"
+              :target="link.target"
             >
               <UIcon name="i-heroicons-arrow-down-tray" class="w-5 h-5" />
               Descargar desde {{ link.name }}
