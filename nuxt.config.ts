@@ -18,8 +18,8 @@ export default defineNuxtConfig({
     }
   },
 
-  // nitro: {
-  //   preset: 'github-pages'
-  // },
+  nitro: {
+    preset: 'github-pages'
+  },
   
 })
