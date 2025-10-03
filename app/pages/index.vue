@@ -91,7 +91,6 @@ const npcsColumns: TableColumn<any>[] = [
   }
 ]
 
-
 const open = ref(true)
 
 defineShortcuts({
@@ -101,13 +100,7 @@ defineShortcuts({
 
 <template>
 
-  <UModal v-model:open="open" title="Falta poco para la apertura" :close="false" size="md" description="Estamos afinando detalles para brindarte la mejor experiencia. ¡Pronto estaremos en línea!">
-    <template #footer>
-      <div class="w-full text-right">
-        <UButton color="warning" variant="solid" @click="open = false" href="https://discord.gg/66f3ZfPKBY" target="_blank">Cerrar</UButton>
-      </div>
-    </template>
-  </UModal>
+  <UModal v-model:open="open" title="Falta poco para la apertura" :close="true" size="md" description="Estamos afinando detalles para brindarte la mejor experiencia. ¡Pronto estaremos en línea!"></UModal>
 
 
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
